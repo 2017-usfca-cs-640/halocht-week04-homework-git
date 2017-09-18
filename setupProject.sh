@@ -10,17 +10,19 @@
 
 echo "Creating directories"
 
-mkdir code data output data/rawdata output/figures output/tables
+mkdir code data output data/raw_data output/figures output/tables
 
 echo "Done!"
 
 # Download the zip file into the rawdata folder
 
-cd data/rawdata
-
-echo "CD to rawdata"
-
 echo "Downloading zip file"
+
+cd
+
+cd Desktop
+
+cd halocht-week04-homework-git/data/raw_data
 
 curl -L http://npk.io/PUlBaY+ -o fasta-archive.zip 
 
@@ -42,6 +44,10 @@ rm fasta-archive.zip
 
 echo "Deletion Done"
 
+cd
+
+cd Desktop
+
 cd halocht-week04-homework-git
 
 # Create empty README
@@ -51,3 +57,14 @@ echo "Create README"
 touch README.md
 
 echo "Done!"
+
+# Track invisible files for git
+
+echo "Git Invisibile"
+
+touch .gitkeep code  output/figures output/tables
+
+echo "Done!"
+
+
+
