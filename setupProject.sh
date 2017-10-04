@@ -26,17 +26,15 @@ echo "Zip download  done"
 
 echo "unzip fasta"
 
-unzip "fasta-archive.zip" 
+unzip data/raw_data/fasta-archive.zip -d data/raw_data 
 
 echo "Unzip done"
-
-#Now the files must be moved to the raw_data folder
 
 #Delete the fasta archive
 
 echo "Deleting fasta archive"
 
-rm fasta-archive.zip
+rm "data/raw_data/fasta-archive.zip"
 
 echo "Deletion Done"
 
