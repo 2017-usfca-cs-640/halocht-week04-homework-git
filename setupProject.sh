@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Short script to setup directories for week04-homework
+# Short script to setup directories, expand zip files and figuring out how to track files with .gitkeep for week04-homework
 
 # Alfredo Hans Locht halocht@gmail.com
 
@@ -18,12 +18,6 @@ echo "Done!"
 
 echo "Downloading zip file"
 
-cd
-
-cd Desktop
-
-cd halocht-week04-homework-git/data/raw_data
-
 curl -L http://npk.io/PUlBaY+ -o fasta-archive.zip 
 
 echo "Zip download  done"
@@ -32,9 +26,17 @@ echo "Zip download  done"
 
 echo "unzip fasta"
 
-unzip "fasta-archive.zip"
+unzip "fasta-archive.zip" 
 
 echo "Unzip done"
+
+#Now the files must be moved to the raw_data folder
+
+echo "Moving all of the fasta files to the raw_data directory"
+
+mv *.fasta data/raw_data/
+
+echo "Done moving all 3 files"
 
 #Delete the fasta archive
 
@@ -44,11 +46,6 @@ rm fasta-archive.zip
 
 echo "Deletion Done"
 
-cd
-
-cd Desktop
-
-cd halocht-week04-homework-git
 
 # Create empty README
 
@@ -62,7 +59,7 @@ echo "Done!"
 
 echo "Git Invisibile"
 
-touch .gitkeep code  output/figures output/tables
+touch code/.gitkeep  output/figures/.gitkeep output/tables/.gitkeep
 
 echo "Done!"
 
