@@ -18,7 +18,7 @@ echo "Done!"
 
 echo "Downloading zip file"
 
-curl -L http://npk.io/PUlBaY+ -o fasta-archive.zip 
+curl -L http://npk.io/PUlBaY+ -o data/raw_data/fasta-archive.zip 
 
 echo "Zip download  done"
 
@@ -31,12 +31,6 @@ unzip "fasta-archive.zip"
 echo "Unzip done"
 
 #Now the files must be moved to the raw_data folder
-
-echo "Moving all of the fasta files to the raw_data directory"
-
-mv *.fasta data/raw_data/
-
-echo "Done moving all 3 files"
 
 #Delete the fasta archive
 
