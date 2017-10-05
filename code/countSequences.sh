@@ -7,7 +7,6 @@
 # 03Oct2017 but first tried on 18Sep2017
 
 for filename in "$@"
-
+do
 	echo  "The file $filename has $(grep -c '^>' $filename) sequences in it"
-
 done
